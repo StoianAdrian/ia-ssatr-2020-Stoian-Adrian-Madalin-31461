@@ -5,22 +5,19 @@
  */
 package ro.utcluj.ssatr.curs2.ssatr.ia;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author mihai.hulea
  */
 public class TestTrack {
-   Car[] cars = new Car[10]; // [null null null null ....]
+ ArrayList<Car> cars = new ArrayList<>();  
+// Car[] cars = new Car[10]; // [null null null null ....]
    
    void addCar(Car c){
-       for(int i=0;i<cars.length;i++){
-           if(cars[i]==null){
-               cars[i] = c;
-               System.out.println("New car added on test track.");
-               return;
-           }           
-       }
-       System.out.println("No empty position found on test track.");
+      cars.add(c);
+      System.out.println("New car added on test track.");
    }
    
    //polimorfism - mecanimsul prin care in mod dinamic la rulare se determina tipul concert al obiectului
@@ -33,7 +30,7 @@ public class TestTrack {
         }
    }
    
-   String getAllCarsDetails(){
+   String getAllCarsDetails(){ 
        String all = "";
        for(Car c: cars){ 
            if(c!=null){
@@ -49,8 +46,8 @@ public class TestTrack {
         
         track1.addCar(new ElectricCar("Tesla 1", 0,""));
         track1.addCar(new ElectricCar("Tesla 2", 0,""));
-        track1.addCar(new DieselCar("Tesla 2", 0,""));
-        track1.addCar(new DieselCar("Tesla 2", 0,""));
+        track1.addCar(new DieselCar("Tesla 3", 0,""));
+        track1.addCar(new DieselCar("Tesla 4", 0,""));
         
         track1.testAccelerate(4);
         
