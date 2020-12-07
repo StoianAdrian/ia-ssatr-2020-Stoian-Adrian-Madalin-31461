@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package ro.utcluj.ssatr.curs3.ssatr.ia.colectii.retea;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -24,15 +23,19 @@ public class Client {
         BufferedReader fluxIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
         PrintWriter fluxOut = new PrintWriter(new OutputStreamWriter(s.getOutputStream()),true);
         
-        fluxOut.println("Hello from client 1");
+        fluxOut.println("34 + 35");
         String response = fluxIn.readLine();
         System.out.println(response);
         
-        fluxOut.println("Hello from client 2");
+        fluxOut.println("100 - 80");
         response = fluxIn.readLine();
         System.out.println(response);
         
-        fluxOut.println("Hello from client 3");
+        fluxOut.println("100 / 50");
+        response = fluxIn.readLine();
+        System.out.println(response);
+        
+        fluxOut.println("20 * 10");
         response = fluxIn.readLine();
         System.out.println(response);
         
