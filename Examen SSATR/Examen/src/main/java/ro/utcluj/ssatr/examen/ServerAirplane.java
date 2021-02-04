@@ -58,7 +58,7 @@ public void initInterfata(AirportJFrame Interfata) {
             }
         }
 
-    }//.startServer}
+    }//Server
 
     public static void main(String[] args) {
         ServerAirplane server = new ServerAirplane();
@@ -87,8 +87,7 @@ public void initInterfata(AirportJFrame Interfata) {
    
     }
 }
-//.class
-//////////////////////////////////////////////////////////////////////////////////////////
+
 
 class ClientHandler extends Thread {
 
