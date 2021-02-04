@@ -71,7 +71,7 @@ public void initInterfata(AirportJFrame Interfata) {
 
     public String PistaOcupata(String Airplane) {
         String Piste = PisteLibere.get(0);
-        PisteLibere.removeIf(availablePlatform -> availablePlatform.equals(Piste));
+        PisteLibere.removeIf(PisteLibere -> PisteLibere.equals(Piste));
         PisteOcupate.add(Piste);
         Interfata.setBussy(Piste, "Ocupata");
         Interfata.Plane(Piste, "Ocupata", Airplane);

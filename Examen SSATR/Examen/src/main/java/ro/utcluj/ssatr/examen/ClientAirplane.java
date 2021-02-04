@@ -51,7 +51,7 @@ public class ClientAirplane extends Thread {
                 StringTokenizer st = new StringTokenizer(line);
                 String LandingTime = st.nextToken();
                 String Piste = st.nextToken();
-                //TODO: add platform where Airplane stops
+               
                 if (parseInt(LandingTime) / 500 != 0) {
                     System.out.println( Air.getNumber() + " a aterizat pe " + Piste + "! Acesta va stationa " + parseInt(LandingTime) / 500 + " minute!");
                 } else {
